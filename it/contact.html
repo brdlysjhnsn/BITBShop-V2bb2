@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact IT — BITBShop</title>
+<link rel="stylesheet" href="it-shared.css">
+<style>
+  .contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
+  .contact-sidebar h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: #fff; margin-bottom: 16px; }
+  .contact-sidebar h2 em { font-style: normal; color: var(--it-sky); }
+  .contact-sidebar p { font-size: 15px; color: var(--text-dim); line-height: 1.8; margin-bottom: 36px; }
+  .contact-details { display: flex; flex-direction: column; gap: 0; }
+  .cd-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--it-border); }
+  .cd-item:last-child { border-bottom: none; }
+  .cd-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .cd-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--it-sky); margin-bottom: 4px; }
+  .cd-val { font-size: 15px; color: rgba(255,255,255,0.8); }
+
+  .contact-form-wrap { background: var(--it-card); border: 1px solid var(--it-border); padding: 48px; }
+  .contact-form-wrap h3 { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--it-sky); margin-bottom: 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .submit-btn { width: 100%; padding: 16px; background: var(--it-sky); color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s; }
+  .submit-btn:hover { background: var(--it-sky-light); }
+
+  @media (max-width: 900px) {
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-form-wrap { padding: 32px 24px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">IT Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <div class="page-header-inner">
+    <p class="page-eyebrow">IT Consulting Division</p>
+    <h1 class="page-title">Let's Talk IT</h1>
+    <p class="page-subtitle">Whether it's a quick question or a full managed services setup — Bradley is ready to help.</p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="contact-layout">
+    <div class="contact-sidebar">
+      <h2>Get in <em>Touch</em></h2>
+      <p>No call centers. No queues. When you reach out to BITBShop, you're talking directly to Bradley. First consultation is always free.</p>
+      <div class="contact-details">
+        <div class="cd-item">
+          <span class="cd-icon">📞</span>
+          <div><div class="cd-label">Phone</div><div class="cd-val">573-407-0330</div></div>
+        </div>
+        <div class="cd-item">
+          <span class="cd-icon">📧</span>
+          <div><div class="cd-label">Email</div><div class="cd-val">brdlysjhnsn@gmail.com</div></div>
+        </div>
+        <div class="cd-item">
+          <span class="cd-icon">📍</span>
+          <div><div class="cd-label">Location</div><div class="cd-val">Waynesville, MO 65583<br><span style="font-size:12px;color:var(--it-steel);">Serving Pulaski County & surrounding areas</span></div></div>
+        </div>
+        <div class="cd-item">
+          <span class="cd-icon">⏱️</span>
+          <div><div class="cd-label">Response Time</div><div class="cd-val">Same day for calls & emails<br><span style="font-size:12px;color:var(--it-steel);">4-hour response for managed clients</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <h3>Send a Message</h3>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Bradley"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Johnson"></div>
+      </div>
+      <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Business Name"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@yourbusiness.com"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="573-000-0000"></div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">-- Select a service --</option>
+          <option>Managed IT Support (Monthly)</option>
+          <option>Network Setup & Installation</option>
+          <option>Cybersecurity Assessment</option>
+          <option>Cloud Migration</option>
+          <option>POS / Food Service IT</option>
+          <option>Break / Fix Support</option>
+          <option>Staff IT Training</option>
+          <option>Not sure — need a consultation</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Tell Me About Your Situation</label><textarea placeholder="Describe your business, what's not working, or what you're looking to set up. The more detail the better."></textarea></div>
+      <button class="submit-btn">Send Message →</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="../bakery/index.html">Bakery →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

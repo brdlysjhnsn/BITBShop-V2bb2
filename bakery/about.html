@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — BITBShop Bakery</title>
+<link rel="stylesheet" href="bk-shared.css">
+<style>
+  .about-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
+  .sidebar-card { background: #fff; border: 1px solid rgba(139,32,32,0.12); padding: 36px; margin-bottom: 24px; }
+  .sidebar-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 20px; }
+  .sc-item { padding: 12px 0; border-bottom: 1px solid rgba(139,32,32,0.08); display: flex; flex-direction: column; gap: 3px; }
+  .sc-item:last-child { border-bottom: none; }
+  .sc-label { font-size: 11px; color: var(--bk-text-dim); font-family: 'Rajdhani', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+  .sc-val { font-size: 14px; color: var(--bk-text-mid); }
+  .about-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); color: var(--bk-brown); margin-bottom: 16px; margin-top: 44px; }
+  .about-text h2:first-child { margin-top: 0; }
+  .about-text h2 em { font-style: italic; color: var(--bk-red); }
+  .about-text p { font-size: 15px; color: var(--bk-text-mid); line-height: 1.85; margin-bottom: 16px; }
+  .values { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; }
+  .value-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bk-beige); border-left: 3px solid var(--bk-red); }
+  .value-icon { font-size: 24px; flex-shrink: 0; }
+  .value-text h4 { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--bk-brown); margin-bottom: 5px; }
+  .value-text p { font-size: 14px; color: var(--bk-text-dim); line-height: 1.65; margin: 0; }
+  @media (max-width: 900px) { .about-layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">BITBShop Bakery</p>
+    <h1 class="page-title">About the Bakery</h1>
+    <p class="page-subtitle">Small batches. Real ingredients. Made with care for the community we call home.</p>
+  </div>
+</div>
+<div class="content">
+  <div class="about-layout">
+    <div>
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="sc-item"><span class="sc-label">Location</span><span class="sc-val">Waynesville, MO 65583</span></div>
+        <div class="sc-item"><span class="sc-label">Style</span><span class="sc-val">Small-batch, handcrafted</span></div>
+        <div class="sc-item"><span class="sc-label">Specialty</span><span class="sc-val">Custom cakes, and event baking</span></div>
+        <div class="sc-item"><span class="sc-label">Orders</span><span class="sc-val">Pre-orders recommended</span></div>
+        <div class="sc-item"><span class="sc-label">Pickup</span><span class="sc-val">Local Waynesville pickup available</span></div>
+        <div class="sc-item"><span class="sc-label">Phone</span><span class="sc-val">573-407-0330</span></div>
+      </div>
+      <a href="orders.html" class="btn-primary" style="width:100%;justify-content:center;">Place an Order →</a>
+    </div>
+    <div class="about-text">
+      <h2>Baking That <em>Means Something</em></h2>
+      <p>Bradley Johnson has been baking his whole life. Through 20+ years of retail management, through career transitions, through everything — the kitchen has always been a constant. Baking is where precision meets creativity, where patience produces something you can share with people you care about.</p>
+      <p>When BITBShop came together as a business, it felt natural to include the bakery not just as a side offering, but as a genuine part of the identity. In a small town like Waynesville, relationships matter more than advertising. Showing up with a warm loaf or a birthday cake builds more trust than any business card.</p>
+      <h2>Small Batches, <em>On Purpose</em></h2>
+      <p>We deliberately bake in small batches. This isn't a limitation — it's a philosophy. Small batches mean better control over quality, fresher ingredients, and a more personal product. Every cake, every loaf, every dozen cookies gets proper attention.</p>
+      <p>Pre-orders are encouraged because they let us plan, source the best ingredients, and dedicate the right time to your order.
+      <div class="values">
+        <div class="value-item"><div class="value-icon">🌾</div><div class="value-text"><h4>Quality Ingredients</h4><p>We source good ingredients and don't cut corners. The difference shows up in the taste.</p></div></div>
+        <div class="value-item"><div class="value-icon">🤝</div><div class="value-text"><h4>Community First</h4><p>Waynesville is home. Every order supports a local business that's here to support you back.</p></div></div>
+        <div class="value-item"><div class="value-icon">🎖️</div><div class="value-text"><h4>Military Proud</h4><p>Fort Leonard Wood and the families who serve there are at the heart of this community — and at the heart of this bakery.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="orders.html">Orders</a>
+    <a href="contact.html">Contact</a>
+    <a href="../it/index.html">IT Services →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

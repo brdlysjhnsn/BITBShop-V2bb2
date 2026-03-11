@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Orders — BITBShop Bakery</title>
+<link rel="stylesheet" href="bk-shared.css">
+<style>
+  .order-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; }
+  .order-info h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--bk-brown); margin-bottom: 16px; }
+  .order-info h2 em { font-style: italic; color: var(--bk-red); }
+  .order-info p { font-size: 15px; color: var(--bk-text-mid); line-height: 1.8; margin-bottom: 16px; }
+  .order-steps { list-style: none; display: flex; flex-direction: column; gap: 0; margin: 32px 0; }
+  .os-item { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(139,32,32,0.1); align-items: flex-start; }
+  .os-item:last-child { border-bottom: none; }
+  .os-num { width: 36px; height: 36px; border-radius: 50%; background: var(--bk-red); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  .os-text h4 { font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: var(--bk-brown); margin-bottom: 4px; }
+  .os-text p { font-size: 13px; color: var(--bk-text-dim); line-height: 1.6; margin: 0; }
+  .order-form-wrap { background: #fff; border: 1px solid rgba(139,32,32,0.15); padding: 48px; }
+  .order-form-wrap h3 { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .submit-btn { width: 100%; padding: 16px; background: var(--bk-red); color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s; }
+  .submit-btn:hover { background: var(--bk-red-light); }
+  @media (max-width: 900px) { .order-layout { grid-template-columns: 1fr; } .order-form-wrap { padding: 28px 20px; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html" class="active">Custom Orders</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">BITBShop Bakery</p>
+    <h1 class="page-title">Custom Orders</h1>
+    <p class="page-subtitle">Every custom order gets personal attention from start to finish. Tell us what you're dreaming up — we'll make it happen.</p>
+  </div>
+</div>
+<div class="content">
+  <div class="order-layout">
+    <div class="order-info">
+      <h2>How Custom <em>Orders Work</em></h2>
+      <p>Custom orders are how we do our best work. Whether it's a retirement cake, a box of themed cookies for a kid's birthday, or a dozen loaves of banana bread for a church event — the more details you share, the better the result.</p>
+      <ul class="order-steps">
+        <li class="os-item"><div class="os-num">1</div><div class="os-text"><h4>Submit Your Request</h4><p>Fill out the form with your order details, event date, and any design ideas. Photos are welcome and helpful.</p></div></li>
+        <li class="os-item"><div class="os-num">2</div><div class="os-text"><h4>Bradley Gets Back to You</h4><p>Expect a response within 24 hours. Bradley will confirm availability, discuss details, and provide a quote.</p></div></li>
+        <li class="os-item"><div class="os-num">3</div><div class="os-text"><h4>Confirm & Pay Deposit</h4><p>A 50% deposit confirms your order. Balance is due at pickup. Payment by cash, Venmo, or CashApp.</p></div></li>
+        <li class="os-item"><div class="os-num">4</div><div class="os-text"><h4>Fresh Pickup in Waynesville</h4><p>Your order is ready on the agreed date — fresh-baked and ready to impress. Local delivery available for large orders.</p></div></li>
+      </ul>
+      <p style="font-size:13px;color:var(--bk-text-dim);"><strong style="color:var(--bk-brown);">Lead time:</strong> Most custom orders need at least 5–7 days notice. For wedding cakes or large event orders, please contact us 3–4 weeks ahead.</p>
+    </div>
+    <div class="order-form-wrap">
+      <h3>Request a Custom Order</h3>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Your first name"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="573-000-0000"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div class="form-group">
+        <label>What Are You Ordering?</label>
+        <select>
+          <option value="">-- Select a category --</option>
+          <option>Custom Cake (Birthday, Celebration)</option>
+          <option>Military / Retirement Cake</option>
+          <option>Sheet Cake (Large Group)</option>
+          <option>Cupcakes (Decorated)</option>
+          <option>Decorated Sugar Cookies</option>
+          <option>Cookie Gift Box</option>
+          <option>Artisan Bread (Multiple Loaves)</option>
+          <option>Pastry / Catering Order</option>
+          <option>Other — I'll describe below</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Event Date</label><input type="date"></div>
+        <div class="form-group"><label>Pickup Date Needed</label><input type="date"></div>
+      </div>
+      <div class="form-group"><label>Number of Servings / Quantity</label><input type="text" placeholder="e.g., 24 servings, 2 dozen cookies"></div>
+      <div class="form-group"><label>Flavor Preferences</label><input type="text" placeholder="e.g., chocolate cake, vanilla buttercream, no nuts"></div>
+      <div class="form-group"><label>Design Ideas or Special Requests</label><textarea placeholder="Describe your vision — theme, colors, decorations, text on the cake, unit insignia, etc. The more detail the better!"></textarea></div>
+      <button class="submit-btn">Submit Order Request →</button>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+    <a href="../it/index.html">IT Services →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

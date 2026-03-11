@@ -1,0 +1,95 @@
+/* ── BITBShop Bakery Section Shared Styles ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --bk-red: #8b2020;
+  --bk-red-light: #a02828;
+  --bk-red-pale: #c46060;
+  --bk-brown: #5c3317;
+  --bk-brown-light: #7a4a2a;
+  --bk-beige: #f5ead8;
+  --bk-beige-dark: #ede0c8;
+  --bk-cream: #fdf6ec;
+  --bk-light: #faf4eb;
+  --bk-text: #3a2010;
+  --bk-text-mid: #6b4a30;
+  --bk-text-dim: rgba(58,32,16,0.55);
+  --bk-border: rgba(139,32,32,0.18);
+  --bk-card: #fff8f0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Lato', sans-serif; background: var(--bk-cream); color: var(--bk-text); overflow-x: hidden; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 70px;
+  background: rgba(253,246,236,0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--bk-border);
+}
+.nav-logo { font-family: 'Rajdhani', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: 3px; text-decoration: none; }
+.nav-logo .bit { color: #4a90c4; }
+.nav-logo .b { color: var(--bk-red); }
+.nav-logo .shop { color: #bbb; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--bk-text-mid); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--bk-red); }
+.nav-links a.home-link { color: #bbb; }
+.nav-links a.home-link:hover { color: #888; }
+.nav-divider { width: 1px; height: 18px; background: var(--bk-border); }
+
+/* PAGE HEADER */
+.page-header {
+  padding: 140px 64px 80px;
+  background: linear-gradient(135deg, var(--bk-beige) 0%, var(--bk-cream) 60%);
+  position: relative; overflow: hidden;
+  border-bottom: 2px solid var(--bk-border);
+}
+.page-header::before { content: ''; position: absolute; bottom: -120px; right: -80px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(139,32,32,0.07) 0%, transparent 65%); }
+.page-header-inner { position: relative; z-index: 2; max-width: 800px; }
+.page-eyebrow { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 16px; }
+.page-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 700; color: var(--bk-brown); line-height: 1.1; margin-bottom: 18px; }
+.page-subtitle { font-size: 17px; color: var(--bk-text-dim); line-height: 1.75; max-width: 560px; }
+
+/* CONTENT */
+.content { max-width: 1200px; margin: 0 auto; padding: 80px 64px; }
+
+/* CARDS */
+.card { background: var(--bk-card); border: 1px solid rgba(139,32,32,0.12); padding: 36px 32px; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s; }
+.card:hover { border-color: var(--bk-red); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(139,32,32,0.1); }
+
+/* BUTTONS */
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--bk-red); color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background 0.25s, transform 0.2s; }
+.btn-primary:hover { background: var(--bk-red-light); transform: translateX(4px); }
+.btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 13px 30px; border: 2px solid var(--bk-red); color: var(--bk-red); font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; background: transparent; transition: all 0.25s; }
+.btn-outline:hover { background: var(--bk-red); color: #fff; }
+
+/* FORM */
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 24px; }
+.form-group label { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--bk-text-mid); }
+.form-group input, .form-group textarea, .form-group select { background: #fff; border: 1px solid rgba(139,32,32,0.2); color: var(--bk-text); padding: 12px 16px; font-family: 'Lato', sans-serif; font-size: 15px; outline: none; transition: border-color 0.2s; width: 100%; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--bk-red); }
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+/* FOOTER */
+footer { background: var(--bk-brown); padding: 28px 64px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid var(--bk-red); flex-wrap: wrap; gap: 14px; margin-top: 80px; }
+.f-logo { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 3px; }
+.f-logo .bit { color: #4a90c4; }
+.f-logo .b { color: var(--bk-red-pale); }
+.f-logo .shop { color: rgba(255,255,255,0.2); }
+.f-links { display: flex; gap: 20px; }
+.f-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+.f-links a:hover { color: rgba(255,255,255,0.75); }
+footer small { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .page-header { padding: 120px 28px 60px; }
+  .content { padding: 56px 28px; }
+  footer { flex-direction: column; padding: 28px 24px; }
+}

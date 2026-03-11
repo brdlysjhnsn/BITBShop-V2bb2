@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BITBShop Bakery — Waynesville, MO</title>
+<link rel="stylesheet" href="bk-shared.css">
+<style>
+  .hero-bk { min-height: 88vh; display: flex; align-items: center; padding: 120px 64px 80px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--bk-beige) 0%, var(--bk-beige-dark) 50%, #ecdec8 100%); }
+  .hero-bk::before { content: ''; position: absolute; top: -150px; left: -150px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(139,32,32,0.08) 0%, transparent 65%); }
+  .hero-bk::after { content: ''; position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(92,51,23,0.06) 0%, transparent 65%); }
+  .hero-bk-inner { position: relative; z-index: 2; max-width: 680px; }
+  .hero-bk h1 { font-family: 'Playfair Display', serif; font-size: clamp(44px, 7vw, 84px); font-weight: 900; color: var(--bk-brown); line-height: 1.05; margin-bottom: 24px; }
+  .hero-bk h1 em { font-style: italic; color: var(--bk-red); }
+  .hero-eyebrow { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 20px; }
+  .hero-bk p { font-size: 18px; color: var(--bk-text-mid); line-height: 1.8; margin-bottom: 44px; max-width: 500px; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .flavor-strip { background: var(--bk-red); padding: 28px 64px; display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+  .flavor-item { display: flex; align-items: center; gap: 12px; }
+  .flavor-item span:first-child { font-size: 24px; }
+  .flavor-item span:last-child { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+
+  .offerings { background: var(--bk-cream); padding: 88px 64px; }
+  .offerings-inner { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 12px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 48px); color: var(--bk-brown); margin-bottom: 12px; }
+  .section-desc { font-size: 15px; color: var(--bk-text-dim); line-height: 1.75; max-width: 520px; margin-bottom: 52px; }
+  .offerings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .offer-card { background: #fff; border: 1px solid rgba(139,32,32,0.1); padding: 36px 28px; text-align: center; transition: all 0.25s; }
+  .offer-card:hover { border-color: var(--bk-red); box-shadow: 0 6px 28px rgba(139,32,32,0.1); transform: translateY(-4px); }
+  .offer-icon { font-size: 52px; margin-bottom: 18px; }
+  .offer-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--bk-brown); margin-bottom: 12px; }
+  .offer-desc { font-size: 14px; color: var(--bk-text-dim); line-height: 1.7; }
+
+  .story { background: var(--bk-beige); padding: 88px 64px; }
+  .story-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+  .story-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 48px); color: var(--bk-brown); margin-bottom: 20px; }
+  .story-text h2 em { font-style: italic; color: var(--bk-red); }
+  .story-text p { font-size: 15px; color: var(--bk-text-mid); line-height: 1.85; margin-bottom: 16px; }
+  .story-visual { background: #fff; border: 1px solid rgba(139,32,32,0.12); padding: 48px; text-align: center; }
+  .story-visual .big-icon { font-size: 80px; margin-bottom: 24px; }
+  .story-visual p { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--bk-brown); font-style: italic; line-height: 1.5; }
+  .story-visual .attrib { font-family: 'Rajdhani', sans-serif; font-size: 12px; letter-spacing: 3px; color: var(--bk-red); text-transform: uppercase; margin-top: 16px; }
+
+  @media (max-width: 900px) {
+    .hero-bk { padding: 120px 28px 60px; }
+    .flavor-strip { padding: 24px 28px; gap: 24px; }
+    .offerings { padding: 64px 28px; }
+    .offerings-grid { grid-template-columns: 1fr; }
+    .story { padding: 64px 28px; }
+    .story-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-btns { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html" class="active">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="hero-bk">
+  <div class="hero-bk-inner">
+    <p class="hero-eyebrow">Bakery Division &nbsp;·&nbsp; Best in the Business</p>
+    <h1>Baked With <em>Heart,</em> Made for This Community</h1>
+    <p>Small-batch specialty baked goods crafted fresh in Waynesville. Custom orders, event catering, and seasonal treats — all made by hand with care. Work you'd be proud to say you did yourself.</p>
+    <p style="font-family:'Rajdhani',sans-serif;font-size:13px;letter-spacing:2px;color:var(--bk-text-dim);margin-top:-20px;margin-bottom:44px;">JOAT-MOT &nbsp;·&nbsp; Jack of All Trades, Master of Two</p>
+    <div class="hero-btns">
+      <a href="menu.html" class="btn-primary">Browse the Menu →</a>
+      <a href="orders.html" class="btn-outline">Place a Custom Order</a>
+    </div>
+  </div>
+</section>
+
+<div class="flavor-strip">
+  <div class="flavor-item"><span>🎂</span><span>Custom Cakes</span></div>
+  <div class="flavor-item"><span>🥐</span><span>Fresh Pastries</span></div>
+  <div class="flavor-item"><span>🍞</span><span>*****</span></div>
+  <div class="flavor-item"><span>🎖️</span><span>Military Events</span></div>
+  <div class="flavor-item"><span>🏪</span><span>Local Delivery</span></div>
+</div>
+
+<section class="offerings">
+  <div class="offerings-inner">
+    <p class="section-eyebrow">What We Offer</p>
+    <h2 class="section-title">Something Delicious for Every Occasion</h2>
+    <p class="section-desc">From everyday treats to once-in-a-lifetime celebrations — BITBShop Bakery is here to make it sweeter.</p>
+    <div class="offerings-grid">
+      <div class="offer-card">
+        <div class="offer-icon">🎂</div>
+        <h3 class="offer-title">Custom Celebration Cakes</h3>
+        <p class="offer-desc">Birthdays, retirements, promotions, and milestones. Every cake is made to order with your vision in mind — from flavor to frosting to design.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🥐</div>
+        <h3 class="offer-title">Fresh Pastries</h3>
+        <p class="offer-desc">Cookies, muffins, strudels, pies, and cakes baked fresh. Perfect for morning meetings, weekend gatherings, or just because.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🎖️</div>
+        <h3 class="offer-title">Military & Corporate Catering</h3>
+        <p class="offer-desc">Change of command ceremonies, promotion parties, office events — we know this community and we're proud to feed it.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🌿</div>
+        <h3 class="offer-title">Seasonal Specials</h3>
+        <p class="offer-desc">Holiday cookies, pumpkin breads, spring cakes, and limited seasonal offerings that rotate throughout the year. Follow us to stay updated.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🧁</div>
+        <h3 class="offer-title">Cupcakes & Brownie Boxes</h3>
+        <p class="offer-desc">Beautifully decorated cupcakes and gift-ready cookie boxes for any occasion. Ideal for thank-you gifts, client appreciation, and celebrations.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🏪</div>
+        <h3 class="offer-title">Farmers Market & Local Pickup</h3>
+        <p class="offer-desc">Find BITBShop Bakery at local markets when in season. Pre-orders available for local pickup — fresh-made and ready when you need it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-inner">
+    <div class="story-text">
+      <h2>Baking Has Always Been <em>Part of the Story</em></h2>
+      <p>Long before BITBShop was a business, the kitchen was where Bradley felt most at home. Baking through every job, every move, every life change — it's never not been part of the daily routine.</p>
+      <p>Now it's part of the business. Not because it had to be, but because it felt right. In a small town like Waynesville, showing up for people matters — and sometimes showing up means arriving with something warm from the oven.</p>
+      <p>Every baked good from BITBShop is made in small batches, by hand, with quality ingredients. No shortcuts. The same attention to detail Bradley brings to IT, he brings to the kitchen.</p>
+      <a href="about.html" class="btn-primary" style="margin-top:16px;">Our Story →</a>
+    </div>
+    <div class="story-visual">
+      <div class="big-icon">🥖</div>
+      <p>"Work you'd be proud to say you did yourself."</p>
+      <div class="attrib">Bradley Johnson &nbsp;·&nbsp; BITBShop &nbsp;·&nbsp; JOAT-MOT</div>
+    </div>
+      <div class="attrib">Bradley Johnson · BITBShop</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="contact.html">Contact</a>
+    <a href="../it/index.html">IT Services →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — BITBShop Bakery</title>
+<link rel="stylesheet" href="bk-shared.css">
+<style>
+  .gallery-note { background: var(--bk-beige); border-left: 4px solid var(--bk-red); padding: 24px 28px; margin-bottom: 48px; }
+  .gallery-note p { font-size: 15px; color: var(--bk-text-mid); line-height: 1.7; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 64px; }
+  .gallery-card { background: #fff; border: 1px solid rgba(139,32,32,0.1); overflow: hidden; transition: all 0.25s; }
+  .gallery-card:hover { border-color: var(--bk-red); box-shadow: 0 6px 24px rgba(139,32,32,0.1); transform: translateY(-3px); }
+  .gallery-placeholder { height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--bk-beige), var(--bk-beige-dark)); gap: 12px; }
+  .gallery-placeholder span:first-child { font-size: 56px; }
+  .gallery-placeholder span:last-child { font-family: 'Rajdhani', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--bk-text-dim); }
+  .gallery-caption { padding: 18px 20px; }
+  .gallery-caption h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--bk-brown); margin-bottom: 6px; }
+  .gallery-caption p { font-size: 13px; color: var(--bk-text-dim); }
+  .gallery-card.featured { grid-column: span 2; }
+  .gallery-card.featured .gallery-placeholder { height: 300px; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">BITBShop Bakery</p>
+    <h1 class="page-title">Gallery</h1>
+    <p class="page-subtitle">A look at what comes out of the BITBShop kitchen. Photos will be added as items are baked and orders are fulfilled.</p>
+  </div>
+</div>
+<div class="content">
+  <div class="gallery-note">
+    <p>Gallery photos will be updated regularly as new bakes are completed and orders are fulfilled. Follow BITBShop on social media for the freshest updates. Want to see something specific? <a href="contact.html" style="color:var(--bk-red);">Get in touch.</a></p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-card featured">
+      <div class="gallery-placeholder"><span>🎂</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Military Retirement Cake</h3><p>Custom decorated celebration cake for a Fort Leonard Wood retirement ceremony.</p></div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-placeholder"><span>🥐</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Butter Croissants</h3><p>Fresh-baked golden croissants, half-dozen box.</p></div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-placeholder"><span>🍞</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Jalapeño Cheddar Loaf</h3><p>The Waynesville crowd favorite — spicy, cheesy, and warm.</p></div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-placeholder"><span>🧁</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Decorated Cupcakes</h3><p>Custom frosted and decorated for a birthday event.</p></div>
+    </div>
+    <div class="gallery-card featured">
+      <div class="gallery-placeholder"><span>🍪</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Holiday Cookie Gift Box</h3><p>Decorated sugar cookies and classic cookies in a gift-ready box.</p></div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-placeholder"><span>🍰</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Carrot Cake Layer</h3><p>Three-layer carrot cake with cream cheese frosting.</p></div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-placeholder"><span>🌾</span><span>Photo Coming Soon</span></div>
+      <div class="gallery-caption"><h3>Classic Sourdough</h3><p>Naturally leavened sourdough with open crumb and crisp crust.</p></div>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <a href="orders.html" class="btn-primary">Place a Custom Order →</a>
+  </div>
+</div>
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="orders.html">Orders</a>
+    <a href="contact.html">Contact</a>
+    <a href="../it/index.html">IT Services →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

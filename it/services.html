@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Services — BITBShop</title>
+<link rel="stylesheet" href="it-shared.css">
+<style>
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 64px; }
+  .svc-card { background: var(--it-card); border: 1px solid var(--it-border); padding: 40px 36px; position: relative; overflow: hidden; transition: border-color 0.25s, transform 0.25s; }
+  .svc-card:hover { border-color: var(--it-sky); transform: translateY(-4px); }
+  .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--it-sky), transparent); }
+  .svc-icon { font-size: 42px; margin-bottom: 20px; }
+  .svc-title { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: 1px; }
+  .svc-desc { font-size: 14px; color: var(--text-dim); line-height: 1.75; margin-bottom: 20px; }
+  .svc-price { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: var(--it-sky); padding-top: 16px; border-top: 1px solid var(--it-border); }
+  .svc-features { list-style: none; margin: 16px 0 20px; display: flex; flex-direction: column; gap: 8px; }
+  .svc-features li { font-size: 13px; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 10px; }
+  .svc-features li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--it-sky); flex-shrink: 0; }
+
+  .featured-svc { background: linear-gradient(135deg, var(--it-navy), #0a1e35); border: 2px solid var(--it-sky); grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 52px; align-items: center; }
+  .featured-svc::before { background: linear-gradient(90deg, var(--it-sky), #5ba3d8); height: 4px; }
+
+  .cta-band { background: var(--it-navy); border: 1px solid var(--it-border); padding: 60px; text-align: center; margin-top: 24px; }
+  .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 36px; color: #fff; margin-bottom: 14px; }
+  .cta-band p { font-size: 16px; color: var(--text-dim); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .featured-svc { grid-column: span 1; grid-template-columns: 1fr; }
+    .cta-band { padding: 40px 28px; }
+    .cta-btns { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">IT Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="about.html">About</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <div class="page-header-inner">
+    <p class="page-eyebrow">IT Consulting Division</p>
+    <h1 class="page-title">Services & Pricing</h1>
+    <p class="page-subtitle">Straightforward services. Transparent pricing. No surprises. Best in the Business — work you'd be proud to say you did yourself.</p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="services-grid">
+
+    <!-- FEATURED: Managed Services -->
+    <div class="svc-card featured-svc">
+      <div>
+        <div class="svc-icon">🛡️</div>
+        <div class="svc-title">Managed IT Support — Monthly Retainer</div>
+        <div class="svc-desc">The cornerstone service. Proactive monitoring, regular maintenance, and priority response so you can focus on running your business instead of fighting your technology. This is how most clients get started.</div>
+        <ul class="svc-features">
+          <li>Priority response time — 4 hours or less</li>
+          <li>Proactive monitoring and patch management</li>
+          <li>Monthly check-ins and health reports</li>
+          <li>Remote and on-site support included</li>
+          <li>Discounts on project work</li>
+        </ul>
+      </div>
+      <div>
+        <div style="background:rgba(74,144,196,0.08);border:1px solid var(--it-border);padding:32px;margin-bottom:16px;">
+          <div style="font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--it-steel);margin-bottom:20px;">Pricing Tiers</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="padding-bottom:14px;border-bottom:1px solid var(--it-border);">
+              <div style="font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--it-sky);">$150 – $250 / month</div>
+              <div style="font-size:13px;color:var(--text-dim);margin-top:4px;">Small — up to 5 devices</div>
+            </div>
+            <div>
+              <div style="font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--it-sky);">$300 – $600 / month</div>
+              <div style="font-size:13px;color:var(--text-dim);margin-top:4px;">Medium — 6 to 20 devices</div>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon">🌐</div>
+      <div class="svc-title">Network Setup & Installation</div>
+      <div class="svc-desc">Professional network design, installation, and configuration. Routers, switches, Wi-Fi, VLANs, and everything in between — done right the first time.</div>
+      <ul class="svc-features">
+        <li>Wired and wireless network design</li>
+        <li>Cisco-trained configuration</li>
+        <li>Network documentation provided</li>
+      </ul>
+      <div class="svc-price">$75 – $100 / hour or flat-rate quote</div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon">🔒</div>
+      <div class="svc-title">Cybersecurity Assessment</div>
+      <div class="svc-desc">A thorough review of your business's security posture — from network vulnerabilities to user access policies. You'll get a prioritized action plan you can actually follow.</div>
+      <ul class="svc-features">
+        <li>Network and device vulnerability scan</li>
+        <li>Password and access policy review</li>
+        <li>Written report with recommendations</li>
+      </ul>
+      <div class="svc-price">$300 – $800 flat rate</div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon">☁️</div>
+      <div class="svc-title">Cloud Migration</div>
+      <div class="svc-desc">Move your business to Microsoft 365, Google Workspace, or AWS at your pace, with your data protected throughout. AWS Foundations certified guidance every step of the way.</div>
+      <ul class="svc-features">
+        <li>Microsoft 365 setup and migration</li>
+        <li>AWS cloud deployment</li>
+        <li>Data backup and recovery setup</li>
+      </ul>
+      <div class="svc-price">$500 – $2,000 per project</div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon">🍽️</div>
+      <div class="svc-title">POS &amp; Food Service IT</div>
+      <div class="svc-desc">Specialty service for restaurants, cafes, and food businesses. Point-of-sale setup, network configuration, inventory system integration, and ongoing support — from someone who understands food service operations.</div>
+      <ul class="svc-features">
+        <li>POS system installation and training</li>
+        <li>Kitchen network and device setup</li>
+        <li>Optional monthly retainer</li>
+      </ul>
+      <div class="svc-price">$200 – $500 setup + optional retainer</div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon">🔧</div>
+      <div class="svc-title">Break / Fix &amp; On-Demand Support</div>
+      <div class="svc-desc">Something broke and you need it fixed now. On-site or remote support available. No contract required — pay only for what you need.</div>
+      <ul class="svc-features">
+        <li>Same-day response when available</li>
+        <li>Remote and on-site options</li>
+        <li>Hardware and software issues</li>
+      </ul>
+      <div class="svc-price">$85 – $100 / hour</div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon">🎓</div>
+      <div class="svc-title">Staff IT Training</div>
+      <div class="svc-desc">Teach your team to be your first line of defense. Cybersecurity awareness, phishing prevention, password hygiene, and software training sessions tailored to your business.</div>
+      <ul class="svc-features">
+        <li>Cybersecurity awareness training</li>
+        <li>Software onboarding sessions</li>
+        <li>Customized to your team size</li>
+      </ul>
+      <div class="svc-price">$150 – $300 per session</div>
+    </div>
+
+  </div>
+
+  <div class="cta-band">
+    <h2>Not Sure Where to Start?</h2>
+    <p>Schedule a free 30-minute consultation. Bradley will assess your situation and recommend only what you actually need.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Book a Free Consult →</a>
+      <a href="testimonials.html" class="btn-outline">Read Client Reviews</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">IT Home</a>
+    <a href="about.html">About</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="../bakery/index.html">Bakery →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

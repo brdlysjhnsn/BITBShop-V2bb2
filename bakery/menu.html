@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — BITBShop Bakery</title>
+<link rel="stylesheet" href="bk-shared.css">
+<style>
+  .menu-section { margin-bottom: 64px; }
+  .menu-section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 2px solid var(--bk-border); }
+  .menu-section-icon { font-size: 36px; }
+  .menu-section-header h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--bk-brown); }
+  .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .menu-item { background: #fff; border: 1px solid rgba(139,32,32,0.1); padding: 28px 24px; transition: all 0.25s; }
+  .menu-item:hover { border-color: var(--bk-red); box-shadow: 0 4px 20px rgba(139,32,32,0.08); }
+  .menu-item-name { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--bk-brown); margin-bottom: 8px; }
+  .menu-item-desc { font-size: 13px; color: var(--bk-text-dim); line-height: 1.65; margin-bottom: 14px; }
+  .menu-item-footer { display: flex; align-items: center; justify-content: space-between; }
+  .menu-item-price { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: var(--bk-red); }
+  .menu-item-tag { font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; background: rgba(139,32,32,0.08); color: var(--bk-red); border-radius: 2px; }
+
+  .note-box { background: var(--bk-beige); border-left: 4px solid var(--bk-red); padding: 24px 28px; margin-bottom: 48px; }
+  .note-box p { font-size: 14px; color: var(--bk-text-mid); line-height: 1.7; }
+  .note-box strong { color: var(--bk-brown); }
+
+  .cta-band { background: var(--bk-red); padding: 60px; text-align: center; }
+  .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 34px; color: #fff; margin-bottom: 14px; }
+  .cta-band p { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+  .cta-band .btn-primary { background: #fff; color: var(--bk-red); }
+  .cta-band .btn-primary:hover { background: var(--bk-beige); }
+
+  @media (max-width: 900px) {
+    .menu-grid { grid-template-columns: 1fr; }
+    .cta-band { padding: 40px 28px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">BITBShop Bakery</p>
+    <h1 class="page-title">Our Menu</h1>
+    <p class="page-subtitle">Everything is made fresh in small batches. Availability varies — contact Bradley to confirm what's available or to place a pre-order.</p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="note-box">
+    <p><strong>Pre-orders welcome and encouraged.</strong> Because we bake in small batches, pre-ordering ensures you get exactly what you want, fresh and ready. Call or email Bradley to place your order. Pickup available in Waynesville — local delivery for larger orders.</p>
+  </div>
+
+  <!-- CAKES -->
+  <div class="menu-section">
+    <div class="menu-section-header">
+      <span class="menu-section-icon">🎂</span>
+      <h2>Custom Cakes</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-name">Classic Layer Cake</div>
+        <div class="menu-item-desc">Vanilla, chocolate, or carrot — three layers of moist cake with your choice of filling and buttercream frosting. Feeds 12–16.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">Starting at $45</span><span class="menu-item-tag">Custom Order</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Military Celebration Cake</div>
+        <div class="menu-item-desc">Designed for promotions, retirements, and change of command ceremonies.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">Starting at $55</span><span class="menu-item-tag">Popular</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Birthday Sheet Cake</div>
+        <div class="menu-item-desc">Classic sheet cake with custom message and decoration. Vanilla or chocolate, feeds 20–24 people. Great for office parties.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">Starting at $38</span><span class="menu-item-tag">Custom Order</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTRIES -->
+  <div class="menu-section">
+    <div class="menu-section-header">
+      <span class="menu-section-icon">🥐</span>
+      <h2>Pastries & Morning Treats</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-name">Fresh Handmade Cookiwa</div>
+        <div class="menu-item-desc">Sold by the half-dozen or dozen. Perfect for office meetings or weekend mornings.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">$6 / half-dozen</span><span class="menu-item-tag">Fan Favorite</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Muffin Variety Pack</div>
+        <div class="menu-item-desc">Blueberry, lemon poppy, banana walnut, and seasonal varieties. Half-dozen box with assorted flavors.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">$10 / box</span><span class="menu-item-tag">Seasonal</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Strudels</div>
+        <div class="menu-item-desc">Dense, tender puff pastry with filling and cinnamon. Also available in blueberry, cherry, and apple.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">$18 / whole strudel, $12 half strudel</span><span class="menu-item-tag">Available</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADS -->
+  <div class="menu-section">
+    <div class="menu-section-header">
+      <span class="menu-section-icon">🍞</span>
+      <h2>*****</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-name">****</div>
+        <div class="menu-item-desc">***</div>
+        <div class="menu-item-footer"><span class="menu-item-price">*</span><span class="menu-item-tag">Pre-Order</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">****</div>
+        <div class="menu-item-desc">***</div>
+        <div class="menu-item-footer"><span class="menu-item-price">**</span><span class="menu-item-tag">Available</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">****</div>
+        <div class="menu-item-desc">Crowd pleaser every time.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">**</span><span class="menu-item-tag">Popular</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIES & CUPCAKES -->
+  <div class="menu-section">
+    <div class="menu-section-header">
+      <span class="menu-section-icon">🧁</span>
+      <h2>Cupcakes & Cookies</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-name">Decorated Cupcake Dozen</div>
+        <div class="menu-item-desc">Choose your flavor and frosting — custom colors and decorations available for events. Minimum one dozen.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">$24 / dozen</span><span class="menu-item-tag">Custom Order</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Classic Cookie Gift Box</div>
+        <div class="menu-item-desc">Chocolate chip, snickerdoodle, oatmeal raisin, and sugar cookies beautifully packaged for gifting or grazing.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">$14 / box</span><span class="menu-item-tag">Gift Ready</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Decorated Sugar Cookies</div>
+        <div class="menu-item-desc">IcedS decorated sugar cookies for any theme — holidays, military, birthdays, logos. Minimum order of 12.</div>
+        <div class="menu-item-footer"><span class="menu-item-price">Starting at $28 / dozen</span><span class="menu-item-tag">Custom Order</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Ready to Place an Order?</h2>
+    <p>Call or message Bradley to pre-order, ask about availability, or discuss a custom project.</p>
+    <a href="orders.html" class="btn-primary">Place a Custom Order →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Bakery Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="contact.html">Contact</a>
+    <a href="../it/index.html">IT Services →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

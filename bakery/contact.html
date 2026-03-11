@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — BITBShop Bakery</title>
+<link rel="stylesheet" href="bk-shared.css">
+<style>
+  .contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; }
+  .contact-info-block h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--bk-brown); margin-bottom: 16px; }
+  .contact-info-block h2 em { font-style: italic; color: var(--bk-red); }
+  .contact-info-block p { font-size: 15px; color: var(--bk-text-mid); line-height: 1.8; margin-bottom: 32px; }
+  .ci-items { display: flex; flex-direction: column; gap: 0; }
+  .ci-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(139,32,32,0.1); }
+  .ci-item:last-child { border-bottom: none; }
+  .ci-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .ci-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 4px; }
+  .ci-val { font-size: 15px; color: var(--bk-brown); }
+  .contact-form-wrap { background: #fff; border: 1px solid rgba(139,32,32,0.15); padding: 48px; }
+  .contact-form-wrap h3 { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--bk-red); margin-bottom: 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .submit-btn { width: 100%; padding: 16px; background: var(--bk-red); color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s; }
+  .submit-btn:hover { background: var(--bk-red-light); }
+  @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } .contact-form-wrap { padding: 28px 20px; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="orders.html">Custom Orders</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">BITBShop Bakery</p>
+    <h1 class="page-title">Get in Touch</h1>
+    <p class="page-subtitle">Questions about an order, availability, or just want to say hello — Bradley is happy to hear from you.</p>
+  </div>
+</div>
+<div class="content">
+  <div class="contact-layout">
+    <div class="contact-info-block">
+      <h2>We'd Love to <em>Hear From You</em></h2>
+      <p>Whether you're planning a celebration, need a catering quote, or just want to know what's fresh this week — reach out. Bradley responds personally and promptly.</p>
+      <div class="ci-items">
+        <div class="ci-item"><span class="ci-icon">📞</span><div><div class="ci-label">Phone</div><div class="ci-val">573-407-0330</div></div></div>
+        <div class="ci-item"><span class="ci-icon">📧</span><div><div class="ci-label">Email</div><div class="ci-val">brdlysjhnsn@gmail.com</div></div></div>
+        <div class="ci-item"><span class="ci-icon">📍</span><div><div class="ci-label">Location</div><div class="ci-val">Waynesville, MO 65583</div></div></div>
+        <div class="ci-item"><span class="ci-icon">🕐</span><div><div class="ci-label">Response Time</div><div class="ci-val">Usually same day</div></div></div>
+        <div class="ci-item"><span class="ci-icon">📦</span><div><div class="ci-label">Custom Orders</div><div class="ci-val">5–7 days lead time recommended</div></div></div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <h3>Send a Message</h3>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Your name"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="573-000-0000"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div class="form-group">
+        <label>What Can We Help With?</label>
+        <select>
+          <option value="">-- Select --</option>
+          <option>Custom Cake Order</option>
+          <option>Event / Catering Inquiry</option>
+          <option>General Availability Question</option>
+          <option>Pricing Question</option>
+          <option>Something Else</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us what you're looking for — event date, order size, flavor preferences, or just say hello!"></textarea></div>
+      <button class="submit-btn">Send Message →</button>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Bakery</a>
+    <a href="menu.html">Menu</a>
+    <a href="orders.html">Orders</a>
+    <a href="../it/index.html">IT Services →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

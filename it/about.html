@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Bradley — BITBShop IT</title>
+<link rel="stylesheet" href="it-shared.css">
+<style>
+  .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; margin-bottom: 80px; align-items: start; }
+  .about-sidebar { position: sticky; top: 100px; }
+  .about-avatar { width: 100%; aspect-ratio: 1; background: linear-gradient(135deg, var(--it-navy), #0a1e35); border: 2px solid var(--it-border); display: flex; align-items: center; justify-content: center; font-size: 100px; margin-bottom: 24px; }
+  .contact-card { background: var(--it-card); border: 1px solid var(--it-border); padding: 28px; }
+  .contact-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--it-sky); margin-bottom: 20px; }
+  .cc-item { display: flex; flex-direction: column; gap: 3px; padding: 12px 0; border-bottom: 1px solid rgba(74,144,196,0.08); }
+  .cc-item:last-child { border-bottom: none; }
+  .cc-label { font-size: 11px; color: var(--it-steel); font-family: 'Rajdhani', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+  .cc-val { font-size: 14px; color: rgba(255,255,255,0.8); }
+
+  .about-body h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 42px); color: #fff; margin-bottom: 16px; margin-top: 48px; }
+  .about-body h2:first-child { margin-top: 0; }
+  .about-body h2 em { font-style: normal; color: var(--it-sky); }
+  .about-body p { font-size: 15px; color: var(--text-dim); line-height: 1.85; margin-bottom: 16px; }
+
+  .timeline { display: flex; flex-direction: column; gap: 0; margin: 32px 0; }
+  .tl-item { display: flex; gap: 24px; position: relative; padding-bottom: 32px; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-left { display: flex; flex-direction: column; align-items: center; gap: 0; flex-shrink: 0; width: 80px; }
+  .tl-year { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; color: var(--it-sky); letter-spacing: 1px; }
+  .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--it-sky); margin: 6px 0; flex-shrink: 0; }
+  .tl-line { flex: 1; width: 1px; background: var(--it-border); }
+  .tl-item:last-child .tl-line { display: none; }
+  .tl-content h4 { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .tl-content p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-sidebar { position: static; }
+    .about-avatar { max-width: 200px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">IT Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html" class="active">About</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <div class="page-header-inner">
+    <p class="page-eyebrow">IT Consulting Division</p>
+    <h1 class="page-title">Meet Bradley Johnson</h1>
+    <p class="page-subtitle">The person behind BITBShop — IT professional, community member, and lifelong baker.</p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="about-grid">
+    <div class="about-sidebar">
+      <div class="about-avatar">👨‍💻</div>
+      <div class="contact-card">
+        <h3>Contact</h3>
+        <div class="cc-item"><span class="cc-label">Phone</span><span class="cc-val">573-407-0330</span></div>
+        <div class="cc-item"><span class="cc-label">Email</span><span class="cc-val">brdlysjhnsn@gmail.com</span></div>
+        <div class="cc-item"><span class="cc-label">Location</span><span class="cc-val">Waynesville, MO</span></div>
+        <div class="cc-item"><span class="cc-label">Degree</span><span class="cc-val">BS Computer Science, WGU 2024</span></div>
+        <br>
+        <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;">Get In Touch →</a>
+      </div>
+    </div>
+    <div class="about-body">
+      <h2>A Different Kind of <em>IT Professional</em></h2>
+      <p style="font-family:'Rajdhani',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--it-sky);margin-bottom:20px;">JOAT-MOT — Jack of All Trades, Master of Two &nbsp;·&nbsp; Best in the Business</p>
+      <p>Most IT consultants come from a pure tech background. Bradley Johnson comes from something rarer: 20+ years of real-world operations leadership, combined with a genuine passion for technology and a computer science degree earned in 2024.</p>
+      <p>That combination matters. When Bradley sits down with a small business owner, he's not just speaking in network topologies — he's speaking the language of inventory management, vendor relationships, employee scheduling, and the daily chaos of running a business. He's lived it. And when the work is done, it's done right — the kind of work you'd be proud to say you did yourself.</p>
+
+      <h2>The Road to <em>BITBShop</em></h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-year">2003</span><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content"><h4>AAS Networking — Cisco CCNA Track</h4><p>Completed associate degree in Microsoft Networking at Lone Star College, including Cisco Academy CCNA track. The technical foundation was laid early.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-year">2001–11</span><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content"><h4>Zone Manager — Walmart</h4><p>Supervised 10 departments generating $100M+ in revenue, overseeing 65+ associates. Built expertise in operations, vendor management, compliance, and team leadership at scale.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-year">2011–16</span><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content"><h4>Assistant Manager — Sears</h4><p>Managed daily store operations, financials, staffing, and customer escalations. Delivered business metric presentations at the regional level.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-year">2019–24</span><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content"><h4>Certifications &amp; Degree — Full Stack</h4><p>Earned 8 industry certifications (A+, Network+, Security+, Linux Essentials, ITIL v3, CIW, Project+, AWS) and completed a BS in Computer Science / IT Management at Western Governors University. Awarded the WGU Sword and Shield Award in 2022.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-year">2026</span><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content"><h4>BITBShop — Waynesville, MO</h4><p>Launched BITBShop to bring certified, personalized IT consulting to Waynesville's small business community — paired with the small-batch bakery that has always been a part of Bradley's life.</p></div>
+        </div>
+      </div>
+
+      <h2>Why <em>Waynesville?</em></h2>
+      <p>Because this is home. The community around Fort Leonard Wood is full of hardworking small business owners who deserve the same quality of IT support that big city companies take for granted. BITBShop exists to provide exactly that — locally, personally, and at a price that makes sense for businesses of any size.</p>
+      <br>
+      <a href="contact.html" class="btn-primary">Work With Bradley →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="../bakery/index.html">Bakery →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>

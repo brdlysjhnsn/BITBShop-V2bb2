@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials — BITBShop IT</title>
+<link rel="stylesheet" href="it-shared.css">
+<style>
+  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 64px; }
+  .t-card { background: var(--it-card); border: 1px solid var(--it-border); padding: 40px 36px; position: relative; }
+  .t-card::before { content: '\201C'; position: absolute; top: 20px; right: 28px; font-family: 'Playfair Display', serif; font-size: 80px; color: rgba(74,144,196,0.12); line-height: 1; }
+  .stars { color: var(--it-sky); font-size: 18px; margin-bottom: 20px; letter-spacing: 2px; }
+  .t-quote { font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.8; margin-bottom: 28px; font-style: italic; }
+  .t-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--it-border); }
+  .t-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--it-navy), #1a3a5c); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .t-name { font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: #fff; }
+  .t-business { font-size: 12px; color: var(--it-steel); margin-top: 2px; }
+
+  .featured-t { grid-column: span 2; background: linear-gradient(135deg, var(--it-navy), #0a1e35); border: 2px solid var(--it-sky); padding: 52px; }
+
+  .cta-band { background: var(--it-navy); border: 1px solid var(--it-border); padding: 60px; text-align: center; }
+  .cta-band h2 { font-family: 'Playfair Display', serif; font-size: 34px; color: #fff; margin-bottom: 14px; }
+  .cta-band p { font-size: 16px; color: var(--text-dim); margin-bottom: 32px; }
+
+  @media (max-width: 900px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .featured-t { grid-column: span 1; padding: 36px 28px; }
+    .cta-band { padding: 40px 28px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="../index.html" class="home-link">← Home</a>
+    <div class="nav-divider"></div>
+    <a href="index.html">IT Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="testimonials.html" class="active">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <div class="page-header-inner">
+    <p class="page-eyebrow">IT Consulting Division</p>
+    <h1 class="page-title">What Clients Are Saying</h1>
+    <p class="page-subtitle">Real feedback from real Waynesville businesses. JOAT-MOT — Jack of All Trades, Master of Two. Best in the Business.</p>
+  </div>
+</div>
+
+<div class="content">
+  <p style="font-size:14px;color:var(--it-steel);font-style:italic;margin-bottom:40px;">* Testimonials will be added as clients are onboarded. The examples below represent the types of results BITBShop is built to deliver.</p>
+  <div class="testimonials-grid">
+
+    <div class="t-card featured-t">
+      <div class="stars">★★★★★</div>
+      <p class="t-quote"></p>
+      <div class="t-author">
+        <div class="t-avatar">🍕</div>
+        <div>
+          <div class="t-name">Local Restaurant Owner</div>
+          <div class="t-business">Food Service · Waynesville, MO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p class="t-quote"></p>
+      <div class="t-author">
+        <div class="t-avatar">🏡</div>
+        <div>
+          <div class="t-name">Real Estate Agency Owner</div>
+          <div class="t-business">Real Estate · Pulaski County, MO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p class="t-quote"></p>
+      <div class="t-author">
+        <div class="t-avatar">⚖️</div>
+        <div>
+          <div class="t-name">Small Law Firm</div>
+          <div class="t-business">Legal Services · Waynesville, MO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p class="t-quote"></p>
+      <div class="t-author">
+        <div class="t-avatar">🏥</div>
+        <div>
+          <div class="t-name">Medical Practice Manager</div>
+          <div class="t-business">Healthcare · Waynesville, MO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p class="t-quote"></p>
+      <div class="t-author">
+        <div class="t-avatar">🛍️</div>
+        <div>
+          <div class="t-name">Retail Shop Owner</div>
+          <div class="t-business">Retail · Waynesville, MO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p class="t-quote"></p>
+      <div class="t-author">
+        <div class="t-avatar">🏗️</div>
+        <div>
+          <div class="t-name">General Contractor</div>
+          <div class="t-business">Construction · Pulaski County, MO</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-band">
+    <h2>Ready to Be the Next Success Story?</h2>
+    <p>Schedule a free consultation and let's figure out what BITBShop can do for your business.</p>
+    <a href="contact.html" class="btn-primary">Book a Free Consult →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="../index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="../bakery/index.html">Bakery →</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+</body>
+</html>
