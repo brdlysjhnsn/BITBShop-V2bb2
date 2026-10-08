@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BITBShop — IT Consulting & Bakery | Waynesville, MO</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --it-navy: #0d2b4e;
+    --it-sky: #4a90c4;
+    --it-steel: #7a8fa6;
+    --it-light: #e8f0f8;
+    --bk-red: #8b2020;
+    --bk-beige: #f5ead8;
+    --bk-brown: #5c3317;
+    --bk-light: #fdf6ec;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', sans-serif; background: #0a0a0a; color: #fff; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 70px;
+    background: rgba(8,8,8,0.93);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .nav-logo { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: 3px; text-decoration: none; }
+  .nav-logo .bit { color: var(--it-sky); }
+  .nav-logo .b { color: var(--bk-red); }
+  .nav-logo .shop { color: #999; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #888; transition: color 0.2s; }
+  .nav-links a.it:hover { color: var(--it-sky); }
+  .nav-links a.bk:hover { color: var(--bk-red); }
+  .nav-divider { width: 1px; height: 18px; background: rgba(255,255,255,0.12); }
+
+  .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 70px; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 60% at 15% 50%, rgba(13,43,78,0.75) 0%, transparent 65%), radial-gradient(ellipse 55% 60% at 85% 50%, rgba(139,32,32,0.55) 0%, transparent 65%), #0a0a0a; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px); background-size: 64px 64px; }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 24px; }
+  .hero-eyebrow { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--it-steel); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.3s; }
+  .hero-title { font-family: 'Rajdhani', sans-serif; font-size: clamp(80px, 13vw, 148px); font-weight: 700; line-height: 0.88; letter-spacing: -3px; margin-bottom: 36px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.5s; }
+  .hero-title .bit { color: var(--it-sky); }
+  .hero-title .b { color: var(--bk-red); }
+  .hero-title .shop { color: rgba(255,255,255,0.12); font-size: 0.44em; display: block; letter-spacing: 14px; margin-top: 8px; }
+  .hero-tagline { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; line-height: 1.7; margin-bottom: 56px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.7s; }
+  .hero-tagline strong { color: rgba(255,255,255,0.82); font-weight: 400; }
+  .hero-btns { display: flex; gap: 20px; justify-content: center; opacity: 0; animation: fadeUp 0.8s ease forwards 0.9s; }
+  .hero-btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 38px; font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; border: 2px solid; position: relative; overflow: hidden; transition: color 0.3s; }
+  .hero-btn::before { content: ''; position: absolute; inset: 0; transform: translateX(-101%); transition: transform 0.3s ease; z-index: 0; }
+  .hero-btn:hover::before { transform: translateX(0); }
+  .hero-btn span { position: relative; z-index: 1; }
+  .btn-it { color: var(--it-sky); border-color: var(--it-sky); }
+  .btn-it::before { background: var(--it-sky); }
+  .btn-it:hover { color: #fff; }
+  .btn-bk { color: #d46060; border-color: var(--bk-red); }
+  .btn-bk::before { background: var(--bk-red); }
+  .btn-bk:hover { color: #fff; }
+
+  .split-bar { display: grid; grid-template-columns: 1fr 1fr; height: 5px; }
+  .split-bar .it { background: linear-gradient(90deg, var(--it-navy), var(--it-sky)); }
+  .split-bar .bk { background: linear-gradient(90deg, var(--bk-red), var(--bk-brown)); }
+
+  .dual { display: grid; grid-template-columns: 1fr 1fr; }
+  .pane { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+  .pane.it { background: var(--it-navy); }
+  .pane.it::after { content: ''; position: absolute; top: -120px; right: -120px; width: 440px; height: 440px; border-radius: 50%; background: radial-gradient(circle, rgba(74,144,196,0.12) 0%, transparent 70%); pointer-events: none; }
+  .pane.bk { background: var(--bk-beige); }
+  .pane.bk::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(139,32,32,0.1) 0%, transparent 70%); pointer-events: none; }
+  .pane-icon { font-size: 48px; margin-bottom: 20px; }
+  .pane-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 14px; }
+  .pane.it .pane-label { color: var(--it-sky); }
+  .pane.bk .pane-label { color: var(--bk-red); }
+  .pane-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 46px); font-weight: 700; line-height: 1.15; margin-bottom: 18px; }
+  .pane.it .pane-title { color: #fff; }
+  .pane.bk .pane-title { color: var(--bk-brown); }
+  .pane-desc { font-size: 15px; line-height: 1.75; margin-bottom: 36px; max-width: 400px; }
+  .pane.it .pane-desc { color: rgba(255,255,255,0.55); }
+  .pane.bk .pane-desc { color: rgba(92,51,23,0.7); }
+  .pane-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 44px; }
+  .pane-list li { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+  .pane.it .pane-list li { color: rgba(255,255,255,0.72); }
+  .pane.bk .pane-list li { color: var(--bk-brown); }
+  .pane-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+  .pane.it .pane-list li::before { background: var(--it-sky); }
+  .pane.bk .pane-list li::before { background: var(--bk-red); }
+  .pane-cta { display: inline-flex; align-items: center; gap: 8px; padding: 13px 30px; font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; align-self: flex-start; transition: all 0.25s; }
+  .pane.it .pane-cta { background: var(--it-sky); color: #fff; }
+  .pane.it .pane-cta:hover { background: #5ba3d8; transform: translateX(5px); }
+  .pane.bk .pane-cta { background: var(--bk-red); color: #fff; }
+  .pane.bk .pane-cta:hover { background: #a02828; transform: translateX(5px); }
+
+  .about { background: #111; padding: 88px 64px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  .about h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 46px); color: #fff; margin-bottom: 18px; }
+  .about h2 .sky { color: var(--it-sky); font-style: normal; }
+  .about h2 .red { color: #d46060; font-style: normal; }
+  .about p { font-size: 16px; line-height: 1.85; color: rgba(255,255,255,0.5); max-width: 700px; margin: 0 auto 40px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .badge { padding: 7px 18px; font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; }
+  .badge.it { background: rgba(74,144,196,0.12); color: var(--it-sky); border: 1px solid rgba(74,144,196,0.25); }
+  .badge.bk { background: rgba(139,32,32,0.12); color: #d46060; border: 1px solid rgba(139,32,32,0.25); }
+
+  .contact-bar { background: #0d0d0d; padding: 60px 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.05); }
+  .contact-bar h3 { font-family: 'Playfair Display', serif; font-size: 30px; color: #fff; margin-bottom: 6px; }
+  .contact-bar p { color: rgba(255,255,255,0.38); font-size: 14px; }
+  .contact-items { display: flex; gap: 36px; flex-wrap: wrap; }
+  .ci { display: flex; flex-direction: column; gap: 4px; }
+  .ci .label { font-family: 'Rajdhani', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--it-steel); }
+  .ci .val { font-size: 15px; color: #ddd; }
+
+  footer { background: #060606; padding: 28px 64px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.04); flex-wrap: wrap; gap: 14px; }
+  .f-logo { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 3px; }
+  .f-logo .bit { color: var(--it-sky); }
+  .f-logo .b { color: var(--bk-red); }
+  .f-logo .shop { color: #333; }
+  .f-links { display: flex; gap: 20px; }
+  .f-links a { font-size: 12px; color: #333; text-decoration: none; transition: color 0.2s; }
+  .f-links a:hover { color: #777; }
+  footer small { font-size: 12px; color: #2a2a2a; }
+
+  @keyframes fadeUp { from { opacity:0; transform: translateY(22px); } to { opacity:1; transform: translateY(0); } }
+
+  @media (max-width: 800px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .dual { grid-template-columns: 1fr; }
+    .pane { padding: 56px 28px; }
+    .about { padding: 64px 28px; }
+    .contact-bar { flex-direction: column; padding: 48px 28px; }
+    footer { flex-direction: column; padding: 28px 24px; }
+    .hero-btns { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></a>
+  <div class="nav-links">
+    <a href="it/index.html" class="it">IT Home</a>
+    <a href="it/services.html" class="it">Services</a>
+    <a href="it/testimonials.html" class="it">Testimonials</a>
+    <a href="it/contact.html" class="it">IT Contact</a>
+    <div class="nav-divider"></div>
+    <a href="bakery/index.html" class="bk">Bakery</a>
+    <a href="bakery/menu.html" class="bk">Menu</a>
+    <a href="bakery/orders.html" class="bk">Custom Orders</a>
+    <a href="bakery/contact.html" class="bk">Bakery Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Waynesville, Missouri &nbsp;·&nbsp; Est. 2026</p>
+    <h1 class="hero-title">
+      <span class="bit">BIT</span><span class="b">B</span>
+      <span class="shop">SHOP</span>
+    </h1>
+    <p class="hero-tagline">
+      <strong>Expert IT Consulting.</strong> &nbsp;·&nbsp; <strong>Handcrafted Bakery.</strong><br>
+      Jack of All Trades — Master of Two.
+    </p>
+    <div class="hero-btns">
+      <a href="it/index.html" class="hero-btn btn-it"><span>🖥&nbsp; IT Consulting</span></a>
+      <a href="bakery/index.html" class="hero-btn btn-bk"><span>🥐&nbsp; Our Bakery</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="split-bar"><div class="it"></div><div class="bk"></div></div>
+
+<section class="dual">
+  <div class="pane it">
+    <div class="pane-icon">🖥️</div>
+    <p class="pane-label">IT Division</p>
+    <h2 class="pane-title">Technology That Works for Your Business</h2>
+    <p class="pane-desc">Local, responsive IT consulting and managed services for small businesses across Waynesville and Pulaski County. No big firm. Just Bradley — your neighbor.</p>
+    <ul class="pane-list">
+      <li>Managed IT Support &amp; Monitoring</li>
+      <li>Network Setup &amp; Cybersecurity</li>
+      <li>Cloud Migration — AWS &amp; Microsoft 365</li>
+      <li>POS Systems for Food Service</li>
+      <li>On-Site &amp; Remote Support</li>
+    </ul>
+    <a href="it/index.html" class="pane-cta">Explore IT Services →</a>
+  </div>
+  <div class="pane bk">
+    <div class="pane-icon">🥖</div>
+    <p class="pane-label">Bakery Division</p>
+    <h2 class="pane-title">Made With Care, Delivered With a Smile</h2>
+    <p class="pane-desc">Small-batch specialty baked goods for events, offices, and everyday joy. Custom orders welcome. Fresh-made in Waynesville for the community we love.</p>
+    <ul class="pane-list">
+      <li>Custom Cakes &amp; Celebration Bakes</li>
+      <li>Fresh Pastries</li>
+      <li>Military &amp; Corporate Event Catering</li>
+      <li>Seasonal &amp; Holiday Specials</li>
+      <li>Farmers Market Offerings</li>
+    </ul>
+    <a href="bakery/index.html" class="pane-cta">Visit the Bakery →</a>
+  </div>
+</section>
+
+<section class="about">
+  <h2><em class="sky">JOAT-MOT</em> — Jack of All Trades, Master of Two.</h2>
+  <p style="font-family:'Rajdhani',sans-serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#555;margin-bottom:28px;">Best in the Business &nbsp;·&nbsp; Waynesville, MO</p>
+  <p>Bradley Johnson has spent 20+ years mastering operations, leadership, and technology — and has baked his whole life. With a BS in Computer Science, eight industry certifications, and deep roots in Waynesville, BITBShop delivers work you'd be proud to say you did yourself.</p>
+  <div class="badges">
+    <span class="badge it">Security+</span>
+    <span class="badge it">Network+</span>
+    <span class="badge it">CompTIA A+</span>
+    <span class="badge it">AWS Foundations</span>
+    <span class="badge it">Linux Essentials</span>
+    <span class="badge it">ITIL v3</span>
+    <span class="badge it">Project+</span>
+    </div>
+    <div>
+    <span class="badge bk">Small-Batch Baking</span>
+    <span class="badge bk">Custom Orders</span>
+    <span class="badge bk">Event Catering</span>
+  </div>
+</section>
+
+<section class="contact-bar">
+  <div>
+    <h3>Ready to Talk?</h3>
+    <p>IT questions or bakery orders — Bradley is happy to help with both.</p>
+  </div>
+  <div class="contact-items">
+    <div class="ci"><span class="label">Phone</span><span class="val">573-407-0330</span></div>
+    <div class="ci"><span class="label">Email</span><span class="val">brdlysjhnsn@gmail.com</span></div>
+    <div class="ci"><span class="label">Location</span><span class="val">Waynesville, MO 65583</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo"><span class="bit">BIT</span><span class="b">B</span><span class="shop">Shop</span></div>
+  <div class="f-links">
+    <a href="it/index.html">IT Home</a>
+    <a href="it/services.html">Services</a>
+    <a href="bakery/index.html">Bakery</a>
+    <a href="bakery/menu.html">Menu</a>
+    <a href="it/contact.html">Contact</a>
+  </div>
+  <small>© 2026 BITBShop · Bradley S. Johnson · Waynesville, MO</small>
+</footer>
+
+</body>
+</html>
